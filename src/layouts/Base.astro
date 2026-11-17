@@ -1,0 +1,26 @@
+---
+import '../styles/global.css';
+const { title, description } = Astro.props;
+---
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{title} | PLAY PICK（仮）</title>
+<meta name="description" content={description ?? 'PCゲームのセールと最安値を、日本語対応・日本で有効化できるかまでチェックして紹介するブログ'} />
+</head>
+<body>
+<header class="site"><div class="wrap nav">
+  <a class="logo" href="/">PLAY <span>PICK</span>（仮）💗</a>
+  <nav class="menu">
+    <a href="/">記事一覧</a><a href="/posts/sale-compare/">セール速報</a><a href="/about/">このサイトについて</a>
+  </nav>
+</div></header>
+<main class="wrap"><slot /></main>
+<footer class="site"><div class="wrap">
+  <p>当サイトはアフィリエイト広告（PR）を含む場合があります。価格・セール期間は確認日時点のものです。</p>
+  <p>一般向けゲームのみを扱います。成人向け作品は扱いません。</p>
+</div></footer>
+</body>
+</html>
