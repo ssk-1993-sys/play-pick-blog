@@ -1,0 +1,95 @@
+{
+  "fetched_at": "2026-11-17T14:09:06.637Z",
+  "items": [
+    {
+      "id": 5200620,
+      "name": "Dungeonbound",
+      "original_price": 1700,
+      "final_price": 1530,
+      "discount_percent": 10,
+      "discount_expiration": "2026-11-30T18:00:28.000Z",
+      "url": "https://store.steampowered.com/app/5200620/"
+    },
+    {
+      "id": 3218350,
+      "name": "Melvor Idle 2: A RuneScape Adventure",
+      "original_price": 2100,
+      "final_price": 1890,
+      "discount_percent": 10,
+      "discount_expiration": "2026-11-24T18:00:44.000Z",
+      "url": "https://store.steampowered.com/app/3218350/"
+    },
+    {
+      "id": 1687950,
+      "name": "ペルソナ５ ザ・ロイヤル",
+      "original_price": 7678,
+      "final_price": 2303,
+      "discount_percent": 70,
+      "discount_expiration": "2026-11-30T18:00:00.000Z",
+      "url": "https://store.steampowered.com/app/1687950/"
+    },
+    {
+      "id": 2492040,
+      "name": "餓狼伝説 City of the Wolves",
+      "original_price": 2980,
+      "final_price": 745,
+      "discount_percent": 75,
+      "discount_expiration": "2026-11-21T08:00:00.000Z",
+      "url": "https://store.steampowered.com/app/2492040/"
+    },
+    {
+      "id": 2406770,
+      "name": "Bodycam",
+      "original_price": 3900,
+      "final_price": 3120,
+      "discount_percent": 20,
+      "discount_expiration": "2026-11-20T21:00:00.000Z",
+      "url": "https://store.steampowered.com/app/2406770/"
+    },
+    {
+      "id": 5037200,
+      "name": "just volleyball",
+      "original_price": 1150,
+      "final_price": 713,
+      "discount_percent": 38,
+      "discount_expiration": "2026-11-24T18:00:18.000Z",
+      "url": "https://store.steampowered.com/app/5037200/"
+    },
+    {
+      "id": 2161700,
+      "name": "ペルソナ３ リロード",
+      "original_price": 7678,
+      "final_price": 2687,
+      "discount_percent": 65,
+      "discount_expiration": "2026-11-30T18:00:00.000Z",
+      "url": "https://store.steampowered.com/app/2161700/"
+    },
+    {
+      "id": 2638080,
+      "name": "勇者パーティはぜんめつしました。",
+      "original_price": 1980,
+      "final_price": 1782,
+      "discount_percent": 10,
+      "discount_expiration": "2026-11-23T18:00:33.000Z",
+      "url": "https://store.steampowered.com/app/2638080/"
+    },
+    {
+      "id": 4618570,
+      "name": "ブースターパックヒーロー",
+      "original_price": 1400,
+      "final_price": 980,
+      "discount_percent": 30,
+      "discount_expiration": "2026-11-24T18:00:05.000Z",
+      "url": "https://store.steampowered.com/app/4618570/"
+    },
+    {
+      "id": 1771300,
+      "name": "Kingdom Come: Deliverance II",
+      "original_price": 8090,
+      "final_price": 2669,
+      "discount_percent": 67,
+      "discount_expiration": "2026-11-30T18:00:00.000Z",
+      "url": "https://store.steampowered.com/app/1771300/"
+    }
+  ]
+}
