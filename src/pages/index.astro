@@ -1,0 +1,55 @@
+---
+import Base from '../layouts/Base.astro';
+import { posts } from '../data/posts.js';
+import specials from '../data/specials.json';
+const fmt = (n) => n == null ? '無料/不明' : `¥${n.toLocaleString('ja-JP')}`;
+const fmtDate = (iso) => iso ? new Date(iso).toLocaleDateString('ja-JP', { timeZone: 'Asia/Tokyo', month: 'numeric', day: 'numeric' }) : '-';
+---
+<Base title="トップ">
+  <section class="hero">
+    <div class="hero-flex">
+      <img src="/avatar.webp" alt="金髪ギャルのミラ" />
+      <div>
+        <h1>Steamセールは<br/><span class="pink">ギャル</span>におまかせ💗</h1>
+        <p>値引き中のゲームだけを、金髪ギャルのミラが毎日チェックして紹介するブログだよ。Steam公式ストアAPIからセール情報を自動取得して、割引率・円価格・終了日まで載せるね。</p>
+      </div>
+    </div>
+    <div class="profile">
+      <b>やってる人：ミラ</b>　金髪ギャル／ゲーム大好き／セールで買うのがいちばん好き。
+      Steamのセール会場をパトロールして、「いま買うとお得」「これは過去最安待ち」まで正直に書くよ✨
+      正規キー販売店（Humble Bundle／Fanatical／Green Man Gaming等）とも比べて、いちばん得な買い先を案内するね。
+    </div>
+    <div class="pr">PR表示：当サイトのリンクにはアフィリエイト広告が含まれます（試作中はリンク未接続です）</div>
+  </section>
+  <section class="card" style="margin:14px 0">
+    <h2>いまのSteamセール（自動取得）</h2>
+    <p class="meta">取得日時：{new Date(specials.fetched_at).toLocaleString('ja-JP', { timeZone: 'Asia/Tokyo' })} / 出典：Steam公式ストアAPI（cc=jp）</p>
+    <table class="price-table">
+      <tr><th>タイトル</th><th>割引</th><th>価格</th><th>終了</th></tr>
+      {specials.items.map((g) => (
+        <tr>
+          <td><a href={g.url}>{g.name}</a></td>
+          <td class="best">-{g.discount_percent}%</td>
+          <td>{fmt(g.original_price)} → {fmt(g.final_price)}</td>
+          <td>{fmtDate(g.discount_expiration)}</td>
+        </tr>
+      ))}
+    </table>
+    <p class="note">本番ではこの表をGitHub Actionsで定期更新し、記事では「過去最安か」「キー販売店の方が安くないか」まで添えます。</p>
+  </section>
+  <section class="grid">
+    {posts.map((p) => (
+      <article class="card">
+        <div><span class="badge sale">{p.category}</span>{p.tags.map((t) => <span class="badge">{t}</span>)}</div>
+        <h2><a href={`/posts/${p.slug}/`} style="color:inherit">{p.title}</a></h2>
+        <p class="meta">{p.date}</p>
+        <p>{p.excerpt}</p>
+        <a class="btn" href={`/posts/${p.slug}/`}>記事を見る</a>
+      </article>
+    ))}
+  </section>
+  <section class="card" style="margin-bottom:30px">
+    <h2>このブログの約束</h2>
+    <p>・価格には必ず確認日を書く　・日本で有効化できないキーは勧めない　・日本語対応の有無を必ず書く　・グレーな鍵屋は使わない（正規販売店のみ）</p>
+  </section>
+</Base>
